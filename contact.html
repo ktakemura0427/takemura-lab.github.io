@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Human Sensing Group</title>
+    <link rel="stylesheet" href="./tailwind.min.css">
+</head>
+<body class="bg-white-100 text-gray-900">
+    <!-- メニューを読み込む場所 -->
+    <div id="header-placeholder"></div>
+
+    <main class="container mx-auto px-6 py-10">
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Contact</h2>
+            <p class="mb-4">
+                If you have any questions or inquiries about our research, please feel free to contact us using the information below.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Address</h3>
+            <p class="mb-4">
+                Department of Applied Computer Engineering<br>
+                School of Information Science and Technology<br>
+                Tokai University<br>
+                4-1-1 Kitakaname, Hiratsuka-shi, Kanagawa 259-1292, Japan
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Room</h3>
+            Building #19, 7F
+            <ul class="list-disc pl-6 mb-4">
+                <li>Room #711 is for Dr. Takemura</li>
+                <li>Room #703 is for Students</li>
+                <li>Room #706 is the experimental room</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Email</h3>
+            <p class="mb-4">
+                takemura[at]tokai.ac.jp (replace [at] with @)
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Phone</h3>
+            <p class="mb-4">
+                +81-463-58-1211 (ext. XXXX)
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Access</h3>
+            <p class="mb-4">
+                Tokai University is located in Hiratsuka City, Kanagawa Prefecture. The nearest station is Tokai-Daigaku-mae Station on the Odakyu Line. From the station, it is a 15-minute walk to the campus.
+            </p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-400 text-white text-center py-4 mt-10">
+        <p>&copy; Human Sensing Group 2025</p>
+    </footer>
+
+    <script>
+        // JavaScriptでheader.htmlを読み込む
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // ハンバーガーメニューの開閉を制御
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (menuToggle && mobileMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        mobileMenu.class.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>

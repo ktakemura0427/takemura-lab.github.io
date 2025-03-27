@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Kentaro Takemura | Human Sensing Group</title>
+    <link rel="stylesheet" href="./tailwind.min.css">
+</head>
+<body class="bg-white-100 text-gray-900">
+    <!-- メニューを読み込む場所 -->
+    <div id="header-placeholder"></div>
+    <main class="container mx-auto px-6 py-10">
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Dr. Kentaro Takemura</h2>
+            <p class="mb-4">
+                Kentaro Takemura is a Professor of the Graduate School of Science and Technology, Graduate School of Engineering, and School of Information Science and Technology at Tokai University. Additionally, he is Deputy Director at Tokai University Research & Information Center (TRIC). He joined Tokai University in 2013 and founded the Human Sensing Group as a director.
+            </p>
+            <p class="mb-4">
+                He always seeks state-of-the-art in his research field, so he studies international collaborative research aggressively. He worked on smart cars at Australian National University in 2005, researched first-person vision in the Robotics Institute at Carnegie Mellon University as a visiting researcher from 2011-2012, and bio-robotics at Georgia Tech as a visiting scholar in 2018.
+            </p>
+            <p class="mb-4">
+                Before Tokai University, from 2008-2013, he was an Assistant Professor at Nara Institute of Science and Technology. From 2006 – 2008, he was an Assistant Professor at Nara National College of Technology.
+            </p>
+            <p class="mb-4">
+                He received his B.E. degree in electrical engineering from Shibaura Institute of Technology in 2001, and M.E. and Ph.D. degrees in information science from Nara Institute of Science and Technology, Japan, in 2003 and 2006, respectively.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Education</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>1997: Graduated from Teikyo High School</li>
+                <li>2001: B.E. in Electrical Engineering, Shibaura Institute of Technology</li>
+                <li>2003: M.E. in Information Science, Nara Institute of Science and Technology</li>
+                <li>2006: Ph.D. in Information Science, Nara Institute of Science and Technology</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Work Experience</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>2004 - 2006: COE Research Fellow, Nara Institute of Science and Technology</li>
+                <li>2006 - 2008: Assistant Professor, Nara National College of Technology</li>
+                <li>2008 - 2013: Assistant Professor, Nara Institute of Science and Technology</li>
+                <li>2011 - 2012: Visiting Researcher, The Robotics Institute, Carnegie Mellon University</li>                
+                <li>2013 - 2015: Junior Associate Professor, Tokai University</li>
+                <li>2015 - 2019: Associate Professor, Tokai University</li>
+                <li>2018 - 2018: Visiting Researcher, George W. Woodruff School of Mechanical Engineering, Georgia Institute of Technology</li>                                
+                <li>2020 - present: Professor, Tokai University</li>                
+                <li>2021 - present: Deputy Director, Tokai University Research & Information Center</li>                                
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Teaching Activities</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Linear Algebra, Tokai University, 2022-</li>
+                <li>Computer Vision, Tokai University, 2020-</li>
+                <li>Computer Graphics, Tokai University, 2021-</li>
+                <li>Electronic Circuits, Tokai University, 2013-</li>
+                <li>Robotic Vision, Tokai University Graduate School, 2017-</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Academic Society Memberships</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>ACM Member since 2005</li>
+                <li>IEEE Member since 2008</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Competitive Funds</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>2024-2027: KAKEN Grant-in-Aid for Scientific Research(B), 24K02985 (Principal Investigator)</li>
+                <li>2022-2025: KAKEN Grant-in-Aid for Challenging Research(Pioneering), 22K14823 (Co-Investigator)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+        <p>&copy; Human Sensing Group 2025</p>
+    </footer>
+    <script>
+        // JavaScriptでheader.htmlを読み込む
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // ハンバーガーメニューの開閉を制御
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (menuToggle && mobileMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>

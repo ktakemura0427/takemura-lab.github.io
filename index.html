@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Sensing Group</title>
+    <link rel="stylesheet" href="./tailwind.min.css">
+</head>
+<body class="bg-white-100 text-gray-900">
+    <!-- メニューを読み込む場所 -->
+    <div id="header-placeholder"></div>
+
+    <main class="container mx-auto px-6 py-10">
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Overview</h2>
+            <p class="mb-4">
+                Welcome to the human sensing laboratory led by Dr. Kentaro Takemura. We focus on sensing technologies for user interfaces, robotics, and medical applications.
+                Currently, we study vision-based human sensing technologies, such as eye-tracking and contact sensing. If you are interested in our research field, we welcome your participation, collaboration, and visits.
+            </p>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Main research topics</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>Eye-tracking method</li>
+                <li>Contact sensing</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Current Research Projects (Principal Investigator)</h3>
+            <ul class="list-disc pl-6 mb-4">
+                <li>KAKEN Grant-in-Aid for Scientific Research(B), 24K02985, FY2024-2027</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold mt-6 mb-2 text-red-600">Current Research Projects (Co-Investigator)</h3>
+            <ul class="list-disc pl-6">
+                <li>KAKEN Grant-in-Aid for Challenging Research(Pioneering), 22K14823, FY2022-2025</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-gray-400 text-white text-center py-4 mt-10">
+        <p>&copy; Human Sensing Group 2025</p>
+    </footer>
+    <script>
+        // JavaScriptでheader.htmlを読み込む
+        fetch('header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+
+                // ハンバーガーメニューの開閉を制御
+                const menuToggle = document.getElementById('menu-toggle');
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (menuToggle && mobileMenu) {
+                    menuToggle.addEventListener('click', () => {
+                        mobileMenu.classList.toggle('hidden');
+                    });
+                }
+            })
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+</body>
+</html>
