@@ -53,3 +53,11 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+defaults:
+ -
+   scope:
+     path: "posts" # empty string means all files
+   values:
+     layout: "post"
+     author: "Kentaro Takemura"
