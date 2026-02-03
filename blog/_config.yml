@@ -1,4 +1,4 @@
-# Welcome to Jekyll!
+remote_theme: pmarsceill/just-the-docs# Welcome to Jekyll!
 #
 # This config file is meant for settings that affect your whole blog, values
 # which you are expected to set up once and rarely edit after that. If you find
@@ -30,7 +30,8 @@ twitter_username: KentarooTakemura
 github_username: ktakemura0427
 
 # Build settings
-theme: just-the-docs
+#theme: just-the-docs
+remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
 
