@@ -44,7 +44,7 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/blog
 
       - name: Copy existing site
-        run: rsyc -av --exclude '.git' --exclude 'blog' ./ ./_site/
+        run: rsync -av --exclude '.git' --exclude 'blog' ./ ./_site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
