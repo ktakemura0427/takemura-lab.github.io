@@ -37,6 +37,7 @@ jobs:
         with:
           ruby-version: '3.3'
           bundler-cache: true
+	  working-directory: ./blog
 
       - name: Build with Jekyll
         working-directory: ./blog
