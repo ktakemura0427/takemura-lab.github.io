@@ -29,7 +29,7 @@ twitter_username: KentaroTakemura
 github_username:  ktakemura0427
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: catppuccin_latte
 search: true
 plugins:
