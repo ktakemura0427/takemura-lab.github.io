@@ -43,8 +43,7 @@ jobs:
         run: bundle exec jekyll build --destination ../_site/blog
 
       - name: Copy existing site
-        run: |
-        cp index.html ./_site/
+        run: cp index.html ./_site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
