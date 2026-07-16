@@ -22,19 +22,30 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Build job
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./blog
-          destination: ./_site/blog
+          ruby-version: '3.3'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        working-directory: ./blog
+        run: bundle exec jekyll build --destination ../_site/blog
+
+      - name: Copy existing site
+        run: |
+        cp index.html ./_site/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
