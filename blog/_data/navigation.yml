@@ -1,0 +1,29 @@
+main:
+  - title: "Home"
+    url: /
+
+  - title: "Blog"
+    url: /archives/
+
+    
+lecture:
+  - title: LectureNotes
+    children:
+      - title: "LinearAlgebra"
+        url: /lecture/LA/
+      - title: "ImageProcessing"
+        url: /lecture/IP/
+      - title: "ElectricalCircuit"
+        url: /lecture/EC/
+      - title: "ComputerVision"
+        url: /lecture/CV/
+
+archives:
+  - title: "Blog"
+    children:
+      - title: "All Posts"
+        url: /blog/
+      - title: "Categories"
+        url: /categories/
+      - title: "Tags"
+        url: /tags/

@@ -1,0 +1,62 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: "Kentaro's Blog"
+name: "Kentaro Takemura"
+#email: your-email@example.com
+description: "Eye Tracking, HCI, Computer Vision, Robotics"
+locale: ja-JP
+url: "https://takemura-lab.org"
+baseurl: "/blog"
+twitter_username: KentaroTakemura
+github_username:  ktakemura0427
+
+# Build settings
+theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: catppuccin_latte
+search: true
+plugins:
+  - jekyll-feed
+  - jekyll-include-cache
+markdown: kramdown
+mathjax: true
+kramdown:
+  input: GFM
+  math_engine: mathjax
+math: true
+
+
+author: 
+  name: "Kentaro Takemura"
+  avatar: "https://avatars.githubusercontent.com/u/53566199?v=4/assets/images/profile.jpg"
+  bio: "Professor at Tokai University"
+  location: "Kanagawa, Japan"
+  links:
+    - label: "Takemura-lab"
+      url: "https://takemura-lab.org/"
+    - label: "GitHub"
+      url: "https://github.com/ktakemura0427"
+
+sidebar:
+  - author_profile
+
+include:
+  - _pages
+
